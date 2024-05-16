@@ -142,6 +142,16 @@ def functionPuasson(p, n, m):
     print(m)
     return round (value, roundParam)
 
+def functionPolynomial(mList, pList):
+    print(mList, pList)
+    if len(mList) != len(pList) or sum(pList) != 1:
+        return -1
+    value = permutationsWithRep(mList)
+    for i in range(len(pList)):
+        value = value * (pList[i] ** mList[i])
+    print(value)
+    return round (value, roundParam)
+
 def funcMoivreLaplace(n, m, p):
     print(n, m, p)
     q = 1 - p

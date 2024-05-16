@@ -35,7 +35,7 @@ class Ui_MainWindow(object):
         self.Function_ComboBox = QtWidgets.QComboBox(parent=self.centralwidget)
         self.Function_ComboBox.setObjectName("Function_ComboBox")
 
-        for i in range(7):
+        for i in range(6):
             self.Function_ComboBox.addItem("")
         self.verticalLayoutMain.addWidget(self.Function_ComboBox)
 
@@ -269,8 +269,7 @@ class Ui_MainWindow(object):
         self.Function_ComboBox.setItemText(2, _translate("MainWindow", "Формула Бернулли k >= m"))
         self.Function_ComboBox.setItemText(3, _translate("MainWindow", "Формула Бернулли m1 <= k <= m2"))
         self.Function_ComboBox.setItemText(4, _translate("MainWindow", "Формула Пуассона"))
-        self.Function_ComboBox.setItemText(5, _translate("MainWindow", "Локальная теорема Муавра-Лапласа"))
-        self.Function_ComboBox.setItemText(6, _translate("MainWindow", "Интегральная теорема Муавра-Лапласа"))
+        self.Function_ComboBox.setItemText(5, _translate("MainWindow", "Полиномиальная формула"))
 
         for i in range(self.numInputLine):
             self.inputLabellist[i].setText(_translate("MainWindow", "Input_Label"+str(i)))
