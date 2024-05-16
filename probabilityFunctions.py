@@ -128,14 +128,18 @@ def functionBernoulli(n,m,p):
     q = 1 - p
     return round(combWithoutRep(n, m) * (p**m) * (q**(n-m)), roundParam)
 
-def functionPolynomial(mList, pList):
-    print(mList, pList)
-    if len(mList) != len(pList) or sum(pList) != 1:
-        return -1
-    value = permutationsWithRep(mList)
-    for i in range(len(pList)):
-        value = value * (pList[i] ** mList[i])
+def functionPuasson(p, n, m):
+    #print(mList, pList)
+    #if len(mList) != len(pList) or sum(pList) != 1:
+    #    return -1
+    #value = permutationsWithRep(mList)
+    #for i in range(len(pList)):
+    #    value = value * (pList[i] ** mList[i])
+    #print(value)
+
+    value = (((p * n) ** m) / factorial(m)) * (math.e ** (-(p * n)))
     print(value)
+    print(m)
     return round (value, roundParam)
 
 def funcMoivreLaplace(n, m, p):

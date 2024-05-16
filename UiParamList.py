@@ -130,27 +130,21 @@ def initializationParam4():
 
     param.lines[0].visibility = True
     param.lines[0].needValue = True
-    param.lines[0].lableText = "k"
-    param.lines[0].validatorType = TypeValidator.natural
+    param.lines[0].lableText = "p:"
+    param.lines[0].validatorType = TypeValidator.probaility
 
-    param.lists[0].validatorTypeElementList = TypeValidator.natural
-    param.lists[0].lableText = "Введите M:"
-    param.lists[0].nameElement = "m%d:"
-    param.lists[0].startIndex = 1
-    param.lists[0].numOfLineEditListenerList = 0
-    param.lists[0].visibility = True
-    param.lists[0].needValues = True
+    param.lines[1].visibility = True
+    param.lines[1].needValue = True
+    param.lines[1].lableText = "n:"
+    param.lines[1].validatorType = TypeValidator.natural
 
-    param.lists[1].validatorTypeElementList = TypeValidator.probaility
-    param.lists[1].lableText = "Введите P:"
-    param.lists[1].nameElement = "p%d:"
-    param.lists[1].startIndex = 1
-    param.lists[1].numOfLineEditListenerList = 0
-    param.lists[1].visibility = True
-    param.lists[1].needValues = True
+    param.lines[2].visibility = True
+    param.lines[2].needValue = True
+    param.lines[2].lableText = "m:"
+    param.lines[2].validatorType = TypeValidator.natural
 
-    param.pictureResult.name = "Полиномиальная формула"
-    param.function = lambda values: probabilityFunctions.functionPolynomial(values.lists[0], values.lists[1])
+    param.pictureResult.name = "Формула Пуассона"
+    param.function = lambda values: probabilityFunctions.functionPuasson(values.nums[0], values.nums[1], values.nums[2])
     return param
 def initializationParam5():
     param = UiParam()
